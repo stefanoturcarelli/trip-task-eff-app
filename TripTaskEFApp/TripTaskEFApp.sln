@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34601.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripTaskEFApp", "TripTaskEFApp.csproj", "{1021127E-E9A0-44DA-BBCF-7FCA8D2C7F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP_DAL", "..\IP_DAL\IP_DAL.csproj", "{56AD4DAD-C71B-4AEC-93DB-0CAEC56EC470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IP_BLL", "..\IP_BLL\IP_BLL.csproj", "{6790FF28-635D-4029-953F-38CB7372A446}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1021127E-E9A0-44DA-BBCF-7FCA8D2C7F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1021127E-E9A0-44DA-BBCF-7FCA8D2C7F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1021127E-E9A0-44DA-BBCF-7FCA8D2C7F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1021127E-E9A0-44DA-BBCF-7FCA8D2C7F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56AD4DAD-C71B-4AEC-93DB-0CAEC56EC470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AD4DAD-C71B-4AEC-93DB-0CAEC56EC470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56AD4DAD-C71B-4AEC-93DB-0CAEC56EC470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56AD4DAD-C71B-4AEC-93DB-0CAEC56EC470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6790FF28-635D-4029-953F-38CB7372A446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6790FF28-635D-4029-953F-38CB7372A446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6790FF28-635D-4029-953F-38CB7372A446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6790FF28-635D-4029-953F-38CB7372A446}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C778334-2893-443C-9337-684917B67061}
+	EndGlobalSection
+EndGlobal
