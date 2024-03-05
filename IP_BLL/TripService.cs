@@ -11,12 +11,27 @@ namespace IP_BLL
     {
         public List<Trip> GetTripsService()
         {
-            List<Trip> trips = new List<Trip>();
-            TripRepository tr = new TripRepository();
+            // Create a new instance of the TripRepository class
+            TripRepository tripRepository = new TripRepository();
 
-            trips = tr.GetAllTripsRepository();
+            // Call the GetTripsRepository method of the tripRepository object
+            var trips = tripRepository.GetTripsRepository();
 
+            // Return the trips
             return trips;
+        }
+        // Now, go to the TripController class
+
+        public bool DeleteTripService(int tripId)
+        {
+            // Create a new instance of the TripRepository class
+            TripRepository tripRepository = new TripRepository();
+
+            // Call the DeleteTripRepository method of the tripRepository object
+            var isDeleted = tripRepository.DeleteTripRepository(tripId);
+
+            // Return the isDeleted
+            return isDeleted;
         }
     }
 }

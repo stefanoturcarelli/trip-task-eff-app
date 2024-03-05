@@ -10,24 +10,35 @@ namespace IP_DAL
 {
     public class TripRepository
     {
-        public List<Trip> GetTrips()
+        public List<Trip> GetTripsRepository()
         {
-            List<Trip> trips = new List<Trip>();
+            // Create an instance of the entity model
+            ItineraryPlannerEntities itineraryPlannerEntities = new ItineraryPlannerEntities();
 
-            // Connect to the database using App.config connection string
-            using (SqlConnection conn = new SqlConnection())
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("usp_GetAllTrips", conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
+            // Call Trip entity to get all trips
+            var trips = itineraryPlannerEntities.Trips.ToList();
 
-
-                }
-            }
             return trips;
         }
-    }
+        // Now, go to IP_BLL/TripService.cs
 
+        public bool DeleteTripRepository(int tripId)
+        {
+            ItineraryPlannerEntities itineraryPlannerEntities = new ItineraryPlannerEntities();
+
+            var trip = itineraryPlannerEntities.Trips.Where(x => x.TripId == tripId).FirstOrDefault();
+
+            if (trip != null)
+            {
+                itineraryPlannerEntities.Trips.Remove(trip);
+                itineraryPlannerEntities.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }
 

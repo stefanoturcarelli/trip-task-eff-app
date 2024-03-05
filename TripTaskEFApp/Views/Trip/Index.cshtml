@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        loadData();
+    });
+
+    function loadData() {
+        $.ajax({
+            url: '/TempTrip/GetAll',
+            type: 'GET',
+            contentType: 'application/json; charset=utf-8',
+            success: function (result) {
+                var html = '';
+                $.each(result, function (key, item) {
+                    html += '<tr>';
+                    html += '<td>' + item.Destination + '</td>';
+                    html += '<td>' + item.Description + '</td>';
+                    html += '<td>' + new Date(parseInt(item.StartDate.substr(6))).toLocaleDateString() + '</td>';
+                    html += '<td>' + new Date(parseInt(item.EndDate.substr(6))).toLocaleDateString() + '</td>';
+                });
+                $('.tbody').html(html);
+            },
+            error: function (errorMessage) {
+                alert(errorMessage.responseText);
+            }
+</script>
+
+<h2>Index</h2>
+
+<p>
+    <a href="/TempTrip/Create">Create New</a>
+</p>
+
+<table class="table">
+    <tr>
+        <th>Destination</th>
+        <th>Description</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+
+    @* Trip records will be displayed below *@
+    <tbody class="tbody">
+    </tbody>
+</table>
